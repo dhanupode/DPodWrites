@@ -333,9 +333,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .timeline-item {
   position: relative;
-  padding-bottom: 56px;
+  padding-bottom: 32px;
 }
 .timeline-item:last-child { padding-bottom: 0; }
+.timeline-item .timeline-list:last-child li:last-child {
+  margin-bottom: 0;
+}
 .timeline-dot {
   position: absolute;
   left: -33px;
@@ -492,10 +495,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0 0 28px;
   max-width: 720px;
 }
-.case-study p:last-child { margin-bottom: 0; }
+.case-study p:last-child { margin-bottom: 0; max-width: none; }
 .case-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
 .case-stats div {
@@ -563,6 +566,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* CONTACT */
 .contact-inner { text-align: center; }
 .contact .section-label { text-align: center; }
+.contact .section-title {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+}
 .contact .section-intro { margin-left: auto; margin-right: auto; }
 .contact-actions {
   display: flex;
