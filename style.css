@@ -493,9 +493,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .case-study p {
   color: var(--text-dim);
   margin: 0 0 28px;
-  max-width: 720px;
 }
-.case-study p:last-child { margin-bottom: 0; max-width: none; }
+.case-study p:last-child { margin-bottom: 0; }
 .case-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
