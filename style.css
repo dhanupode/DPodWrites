@@ -75,14 +75,15 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 24px;
   margin-left: auto;
   margin-right: 24px;
 }
 .nav-links a {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-dim);
   transition: color 0.15s ease;
+  white-space: nowrap;
 }
 .nav-links a:hover { color: var(--text); }
 
@@ -374,6 +375,17 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 0.92rem;
   margin: 0 0 16px;
 }
+.timeline-group-title {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-2);
+  margin: 22px 0 10px;
+}
+.timeline-item .timeline-group-title:first-of-type {
+  margin-top: 4px;
+}
 .timeline-list li {
   position: relative;
   padding-left: 20px;
@@ -410,7 +422,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 .tools-card {
@@ -480,6 +492,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0 0 28px;
   max-width: 720px;
 }
+.case-study p:last-child { margin-bottom: 0; }
 .case-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
